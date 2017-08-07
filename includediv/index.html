@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>JQuery sample</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#nav a').on('click', function (e) {
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#content').load(page);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="page4.html">Page 4</a>
+        <a href="page5.html">Page 5</a>
+    </div>
+
+    <div id="content">
+        Welcome! Use the menu to navigate pages.
+    </div>
+</body>
+</html>
